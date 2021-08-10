@@ -1,17 +1,4 @@
 @import "../setting";  // vendor
-.border{
-  h2{
-    text-align: center;
-    background: #eee;
-    padding: 10px;
-  }
-  .sub{
-    padding: 5px;
-    text-align: center;
-    background: #eee;
-    margin-top: 0.5em;
-  }
-}
 .basic{
   font-size: 60px;
   font-family: $font-default;
@@ -23,12 +10,41 @@
   > div{
     @include oval(60px,$white);
     margin-right: 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.452);
+    border: solid 5px #fff;
   }
   .main{
     background: $main;
   }
+  .main-dark {
+    background: $main-dark !important;
+  }
+  .Auxiliarya {
+    background: $Auxiliarya !important;
+  }
+  .Auxiliaryb {
+    background: $Auxiliaryb !important;
+  }
+  .Secondarya {
+    background: $Secondarya !important;
+  }
+  .Secondaryb {
+    background: $Secondaryb !important;
+  }
+  .Secondaryc {
+    background: $Secondaryc !important;
+  }
+  .Secondaryd {
+    background: $Secondaryd !important;
+  }
+  .Secondarye {
+    background: $Secondarye !important;
+  }
+  .Secondaryf {
+    background: $Secondaryf !important;
+  }
   .second{
-    background: $second
+    background: $second;
   }
   .black{
     background: $black;

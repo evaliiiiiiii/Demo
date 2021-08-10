@@ -1,33 +1,15 @@
-// icon
-.i-arrow-r {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  transition: 0.1s linear all;
-  &:before,
-  &:after {
-    content: "";
-    display: block;
-    width: 21px;
-    background: #fff;
-    height: 1px;
-  }
-  &:after {
-    width: 8px;
-    position: relative;
-    left: calc(100% - 8px);
-    top: -3px;
-    transform: rotate(30deg);
-  }
-}
+@import "../setting"; //vendor
+
 
 // textbox: 限制文字最大行數
 .txt-l1 {
   @include textbox(1);
 }
+
 .txt-l2 {
   @include textbox(2);
 }
+
 .txt-l3 {
   @include textbox(3);
 }
@@ -36,324 +18,90 @@
 .text-main {
   color: $main !important;
 }
-.text-second {
-  color: $second !important;
+.text-main-dark {
+  color: $main-dark !important;
 }
-.text-grey {
-  color: $grey !important;
+.text-Auxiliarya {
+  color: $Auxiliarya !important;
 }
-.text-light {
-  color: $light !important;
+.text-Auxiliaryb {
+  color: $Auxiliaryb !important;
 }
-.text-white {
-  color: $white !important;
+.text-Secondarya {
+  color: $Secondarya !important;
 }
-.text-black {
-  color: $black !important;
+.text-Secondaryb {
+  color: $Secondaryb !important;
 }
+.text-Secondaryc {
+  color: $Secondaryc !important;
+}
+.text-Secondaryd {
+  color: $Secondaryd !important;
+}
+.text-Secondarye {
+  color: $Secondarye !important;
+}
+.text-Secondaryf {
+  color: $Secondaryf !important;
+}
+
+
+
 
 // background color
 .bg-main {
   background-color: $main !important;
 }
-.bg-second {
-  background-color: $second !important;
-}
-.bg-grey {
-  background-color: $grey !important;
+.bg-black {
+  background-color: $black !important;
 }
 .bg-light {
   background-color: $light !important;
 }
-.bg-white {
-  background-color: $white !important;
-}
-.bg-black {
-  background-color: $black !important;
-}
 
-// background - center & cover
-.bg-cover {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* button */
-.btn {
-  text-align: center;
-  font-size: 14px;
-  padding: 0.5em 1em;
-  &:hover {
-    box-shadow: $shadow-button;
-  }
-  @include res(xlpad) {
-    font-size: 16px;
-    min-width: 120px;
-    padding: 0.5em 2em;
-  }
-}
-
-/* 圓角按鈕 */
-.btn-pill {
-  border-radius: 50px;
-}
-
-.btn-main {
-  border: 1px solid $main;
-  background: $main;
-  box-shadow: $shadow-button;
-  color: $white;
-  &:hover {
-    background: $none;
-    color: $main;
-  }
-}
-
-.btn-second {
-  border: 1px solid $second;
-  background: $second;
-  box-shadow: $shadow-button;
-  color: $white;
-  &:hover {
-    background: $none;
-    color: $second;
-  }
-}
-
-.btn-white {
-  background: $white;
-  border-radius: 30px;
-  color: $black;
-  &:hover {
-    background: $second;
-    color: #fff;
-  }
-}
-
-.btn-outline-main {
-  color: $main;
-  border-color: $main;
-
-  &:hover {
-    color: $white;
-    background-color: $main;
-    border-color: $main;
-  }
-}
-
-.btn-line {
-  color: $white;
-  background: $brand-line;
-  &:hover {
-    background: rgba($brand-line, 0.4);
-  }
-}
-
-.btn-facebook {
-  color: $white;
-  background: $brand-facebook;
-  &:hover {
-    background: rgba($brand-facebook, 0.4);
-  }
-}
-
-.btn-google {
-  color: $white;
-  background: $brand-google;
-  &:hover {
-    background: rgba($brand-google, 0.4);
-  }
-}
-
-.tag {
-  display: inline-block;
-  border-radius: 4px;
-  padding: 2px 8px;
-  font-size: 14px;
-  color: $white;
-  &.hot {
-    background: $red;
-  }
-  &.new {
-    background: $main;
-  }
-}
-
-// list
-.list-inline-item {
-  vertical-align: middle;
-}
-
-// 分頁按鈕 (Pagination)
-.list-page {
-  > li {
-    display: inline-block;
-    margin-right: 5px;
-    @include res(pad) {
-      margin-right: 10px;
-    }
-    a {
-      display: block;
-      @include square(30px);
-      @include flexbox(center);
-      border-radius: 50%;
-      font-weight: bold;
-      color: $main;
-      &:hover,
-      :focus {
-        border: 1px solid $main;
-      }
-      &.active {
-        box-shadow: $shadow-button;
-        background: $main;
-        color: $white;
-      }
-    }
-  }
-}
-
-.list-angle {
-  li {
-    @include flexbox(y);
-    a {
-      &:before {
-        @include fa;
-        content: "\f054";
-        font-size: 0.75em;
-        margin-right: 8px;
-      }
-    }
-  }
-}
-// box
-.board {
-  padding: 15px 10px;
-  border: $border;
-  border-radius: 15px;
-  @include res(nb) {
-    padding: 25px 20px;
-  }
-}
-
-.oval {
-  @include oval(100px, $white);
-  margin: auto;
-  img {
-    max-width: 65px;
-    max-height: 65px;
-  }
-}
 // Image 固定寬高比
 .box-img {
   @include imgbox(100%);
   background-size: contain;
+
   &.r-4-3 {
     &:before {
       padding-bottom: 75%;
     }
   }
+
   &.r-16-9 {
     &:before {
       padding-bottom: 56.25%;
     }
   }
+
   &.img-fit-text {
     &:before {
       padding-bottom: 50%;
     }
   }
+
   &.img-contain {
     background-size: contain;
   }
-}
 
-/* Iframe 影片樣式 */
-.box-iframe {
-  position: relative;
-  &:before {
-    content: "";
-    width: 100%;
-    display: block;
-    padding-bottom: 56.25%;
-  }
-  iframe {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.hover-shadow-scale {
-  transition: $transition;
-
-  &:hover,
-  &:active {
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: $hover-shadow-card;
-  }
-}
-
-/* banner 大圖: 寬高比 (1920 * 600) */
-.banner {
-  @include imgbox(31.25%, 200px); //1920 * 600px, min-height: 200px
-  .content {
-    @include overlay($none);
-    @include flexbox(center);
-    text-align: center;
-  }
-  &.banner-page {
+  &.img-all {
     &:before {
-      padding-bottom: 20.83%; // 1920*400px
+      padding-bottom: 60%;
     }
   }
-}
 
-.box-qty {
-  input {
-    display: inline-block;
-    max-width: 130px;
-    vertical-align: middle;
-  }
-  button {
-    border-radius: 3px;
-    font-size: 18px;
-    @include square(36px);
-    @include flexbox(center);
-    display: inline-flex;
-    vertical-align: middle;
-    border: 1px solid #bab9b9;
-    &:first-of-type {
-      background: $grey;
-      color: $white;
-    }
-    &:nth-of-type(2) {
-      background: $white;
-      color: $grey;
+  &.img-alls {
+    &:before {
+      padding-bottom: 80%;
     }
   }
-}
 
-.box-msg {
-  background: transparentize($main, 0.92);
-  padding: 30px;
-  @include res(xlpad) {
-    padding: 40px;
-  }
-}
-
-/* 三欄式的輪播投影片 */
-.slider-col-3 {
-  margin-left: -10px;
-  margin-right: -10px;
-  .item {
-    padding: 10px 10px 15px;
-    &:hover {
-      .card {
-        box-shadow: $shadow-box;
-      }
+  &.img100 {
+    &:before {
+      padding-bottom: 100%;
     }
   }
 }
@@ -372,9 +120,15 @@
     padding-left: 1em;
     list-style: disc;
   }
+
   ol {
-    padding-left: 1em;
+    padding-left: 1.5em;
     list-style: decimal;
+
+    ul {
+      list-style: upper-alpha;
+      padding-left: 1em;
+    }
   }
 
   img {
@@ -420,12 +174,14 @@
       padding-right: 20px;
       margin-right: 20px;
       border-right: 1px solid currentColor;
+
       i {
         margin-right: 5px;
         color: $main;
         position: relative;
         top: 2px;
       }
+
       &:last-child {
         border-right: none;
         margin-right: 0;
@@ -433,297 +189,11 @@
       }
     }
   }
-}
 
-// flex-box 垂直置中, 水平為 space-between
-.flex-between {
-  @include flexbox(y);
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-// flex-box 垂直/水平置中
-.flex-center {
-  @include flexbox(center);
-  flex-wrap: wrap;
-}
-
-// List Menu (分類側邊欄, ex: 文章分類，商品分類)
-.list-menu {
-  width: 100%;
-  background-color: $white;
-  color: $black;
-  border: 1px solid darken($white, 10%);
-
-  & > .list-menu-group {
-    position: relative;
-  }
-
-  .list-title,
-  .list-content {
-    padding: 0.75rem 1rem;
-    border-left: 3px solid $main-dark;
-    box-shadow: 1px 0 1px darken($white, 10%);
-  }
-
-  .list-content {
-    position: absolute;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    background: $light;
-    z-index: 1;
-
-    a.list-item,
-    .list-item {
-      color: $black;
-      width: 100%;
-      padding: 0.5rem 0;
-      &:hover,
-      &.active {
-        color: $main;
-      }
-    }
-  }
-
-  .list-title.has-submenu {
-    position: relative;
-    // Caret
-    &::after {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      right: 0.5rem;
-      top: 50%;
-      border-top: 0.3em solid;
-      border-right: 0.3em solid transparent;
-      border-bottom: 0;
-      border-left: 0.3em solid transparent;
-      text-align: right;
-      transform: translate(-100%, -50%);
-      // transition: $transition;
-    }
-
-    &.opened {
-      color: $main;
-    }
-    &.opened::after {
-      transform: translate(-100%, -50%) rotate(180deg);
-    }
-    // &:not(.opened) ~ .list-content { visibility: hidden; }
-  }
-
-  @include res(pad) {
-    .list-content {
-      position: static;
-      margin-left: 0;
-    }
-  }
-}
-
-.no-caret::after {
-  content: none;
-}
-
-table.rwd-table {
-  td {
-    vertical-align: middle;
-    text-align: center;
-  }
-
-  .td-with-img {
-    img {
-      max-width: 80px;
-    }
-  }
-
-  tr.active,
-  td.active,
-  th.active {
-    &,
-    a {
-      background: $black;
-      color: $white;
-    }
-  }
-
-  .mobile-th {
-    display: none;
-  }
-
-  & > tfoot.tfoot-borderless > tr > td,
-  & > tfoot.tfoot-borderless > tr > th {
-    border: transparent;
-  }
-
-  @include res(pad, to-mb) {
-    & {
-      border: none;
-      font-size: 0.95rem;
-    }
-    thead {
-      display: none;
-    }
-    .mobile-th {
-      display: block;
-    }
-
-    tr.mobile-active,
-    td.mobile-active,
-    th.mobile-active {
-      &,
-      a {
-        background: $black;
-        color: $white;
-      }
-    }
-
-    thead tr,
-    tbody tr {
-      display: flex;
-      flex-direction: column;
-      border: 1px solid #cccccc;
-    }
-
-    tfoot tr {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    tbody tr {
-      margin-bottom: 1rem;
-    }
-
-    tbody td {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 0;
-    }
-  }
-}
-
-.input-number {
-  width: 110px;
-  font-size: 0;
-  line-height: 30px;
-  border: 1px solid #cccccc;
-  vertical-align: top;
-  margin: 0 auto;
-
-  .minus,
-  .plus,
-  input {
-    display: inline-block;
-    margin: 0;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border: none;
-    vertical-align: top;
-    height: 30px;
-  }
-
-  input {
-    width: 40px;
-    font-size: 1rem;
-  }
-
-  .minus {
-    border-right: 1px solid #cccccc;
-  }
-  .plus {
-    border-left: 1px solid #cccccc;
-  }
-  .minus,
-  .plus {
-    width: 34px;
-    position: relative;
-    cursor: pointer;
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 9px;
-      height: 1px;
-      pointer-events: none;
-      background-color: $black;
-      margin-left: -5px;
-    }
-
-    &:hover {
-      background-color: #cccccc;
-    }
-
-    &:hover:before {
-      background-color: #ffffff;
-    }
-  }
-
-  .plus:after {
-    content: "";
-    position: absolute;
-    pointer-events: none;
-    top: 50%;
-    left: 50%;
-    background-color: $black;
-    margin: -4px 0 0 -1px;
-    width: 1px;
-    height: 9px;
-  }
-  .plus:hover {
-    background-color: #cccccc;
-  }
-  .plus:hover:after {
-    background-color: #ffffff;
-  }
-}
-
-@include res(phone, to-mb) {
-  .input-number {
-    margin: 0;
-  }
-}
-
-.cart-num {
-  position: absolute;
-  right: -5px;
-  top: -5px;
-  background: $red;
-  color: $white;
-  width: 20px;
-  height: 20px;
-  font-size: 10px;
-  line-height: 20px;
-  text-align: center;
-  border-radius: 50%;
-}
-
-//mobile rwd
-.d-mobile {
-  display: none;
-  @include res(phone, to-mb) {
-    display: block;
-  }
-}
-.d-desktop {
-  display: block;
-  @include res(phone, to-mb) {
-    display: none;
-  }
-}
-
-/*bootstrap input required*/
-label[aria-required="true"]:after {
-  content: "*";
-  color: red;
-  margin-left: 3px;
 }
 
 //Vue Instance 不顯示變數
 [v-cloak] {
   display: none;
 }
+

@@ -15,6 +15,14 @@ $(document).ready(function () {
     // scroll top
     setupScrollTopBtn()
 
+    // 分頁選單
+    respMenu()
+    leftMenu()
+    caenterMenu()
+
+    //tab
+    tab()
+    
     // breadcrumb
     resetBreadCrumbTruncate()
 
@@ -34,7 +42,35 @@ $(document).ready(function () {
 
     $(window).on('resize', function (e) {
         resetHeaderSubmenu()
-    })
+    });
+
+    // Preloader JS
+	$(function() {
+		$('body').addClass('loaded');
+
+	});
+    
+    AOS.init({
+        easing: 'ease-in-out-sine'
+    });
+
+    $(window).on('scroll', function(){
+		var scrolled = $(window).scrollTop();
+		if (scrolled > 300) {
+			$('.go-top, .float-sidebar').addClass('active');
+		}
+
+		if (scrolled < 300) {
+			$('.go-top, .float-sidebar').removeClass('active');
+		}
+
+	});
+    
+    // Click Event JS
+	$('.box-gotop, .go-top').on('click', function() {
+		$("html, body").animate({ scrollTop: "0" },  500);
+	});
+    
     function resetHeaderSubmenu () {
         $('.headerwrap .has_submenu > a').siblings('.submenu').css('display', '')
     }
@@ -281,6 +317,58 @@ $(document).ready(function () {
             }, 800);
             return false;
         });
+
+    }
+    function respMenu() {
+        $("#respMenu").aceResponsiveMenu({
+            resizeWidth: '991',
+            animationSpeed: 'fast',
+            accoridonExpAll: false
+        });
+        $('#menu-btnd').click(function () {
+            $('#respMenu').toggleClass('hide-menu');
+        });
+    }
+
+    function leftMenu() {
+        $("#leftMenu").aceResponsiveMenu({
+            resizeWidth: '991',
+            animationSpeed: 'fast',
+            accoridonExpAll: false
+        });
+        $('#menu-btnl').click(function () {
+            $('#leftMenu').toggleClass('hide-menu');
+        });
+    }
+    function caenterMenu() {
+        $("#caenterMenu").aceResponsiveMenu({
+            resizeWidth: '991',
+            animationSpeed: 'fast',
+            accoridonExpAll: false
+        });
+        $('#menu-btns').click(function () {
+            $('#caenterMenu').toggleClass('hide-menu');
+        });
+    }
+    function tab() {
+        $(".tab_content").hide();
+        $(".tab_content:first").show();
+
+        $("ul.tabs li").click(function () {
+
+            $(".tab_content").hide();
+            var activeTab = $(this).attr("rel");
+            $("#" + activeTab).fadeIn();
+
+            $("ul.tabs li").removeClass("active");
+            $(this).addClass("active");
+
+            $(".tab_drawer_heading").removeClass("d_active");
+            $(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
+
+        });
+
+        $('ul.tabs li').last().addClass("tab_last");
 
     }
 });

@@ -1,11 +1,12 @@
 @import "layout/reboot"; // global page layout
 @import "layout/layout"; // global page layout
 @import "layout/header"; // page header
+@import "layout/sub-menu"; // 晶達專案子選單(三種型態)
 @import "layout/footer"; // page footer
 @import "layout/elements"; // page elements
 @import "layout/textstyle"; // page font styles
 @import "layout/form"; // page form
-@import "layout/hover"; // hover
+
 
 // pages
 @import "page/index";
@@ -17,6 +18,8 @@
 @import "page/other";
 @import "page/timeline";
 @import "page/element";
-
+@import "page/slick";
+@import "page/btn";
+@import "page/parallax";
 // vendors
 @import "vendors/custom-select2";

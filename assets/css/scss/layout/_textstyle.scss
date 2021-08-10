@@ -39,6 +39,74 @@
   }
 }
 
+h1, .h1 {
+  font-size: 30px;
+  @include res(pad) {
+    font-size: 38px;
+  }
+}
+h1, .h2 {
+  font-size: 22px;
+  @include res(pad) {
+    font-size: 32px;
+  }
+}
+h1, .h3 {
+  font-size: 18px;
+  @include res(pad) {
+    font-size: 28px;
+  }
+}
+h1, .h4 {
+  font-size: 18px;
+  @include res(pad) {
+    font-size: 24px;
+  }
+}
+h1, .h5 {
+  font-size: 18px;
+  @include res(pad) {
+    font-size: 22px;
+  }
+}
+
+.title01 {
+  font-size: 16px;
+  @include res(pad) {
+    font-size: 20px;
+  }
+}
+.title02 {
+  font-size: 16px;
+  @include res(pad) {
+    font-size: 18px;
+  }
+}
+
+.title03 {
+  font-size: 14px;
+  @include res(pad) {
+    font-size: 16px;
+  }
+}
+
+.title04 {
+  font-size: 12px;
+  @include res(pad) {
+    font-size: 14px;
+  }
+}
+
+.title05 {
+  font-size: 12px;
+}
+
+
+
+
+
+
+
 .border-under-title {
   display: block;
   margin: 0.5em 0;

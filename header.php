@@ -30,78 +30,13 @@
     <link href="assets/css/slick.css" rel="stylesheet" type="text/css">
     <!-- Plugins for vendors.php -->
     <link href="assets/css/waves-0.7.6.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
 
     <!--  Customized -->
     <link href="assets/css/common.css?t=<?=time()?>" rel="stylesheet" type="text/css">
+
 </head>
 
 <?php include('data.php'); /*Demo用*/ ?>
 
 <body>
-    <div class="headerwrap">
-        <div class="topbar">
-            <div class="container">
-                <div class="flex-between">
-                    <a href="article.php">全館優惠</a>
-                    <ul>
-                        <li class="list-inline-item"><a href="about.php"><i class="fas fa-envelope"></i></a></li>
-                        <li class="list-inline-item has_submenu">
-                            <a href="login.php"><i class="fas fa-user"></i> 會員中心</a>
-                            <div class="submenu">
-                                <ul>
-                                    <li><a href="account.php">會員中心</a></li>
-                                    <li><a href="addresslist.php">地址資訊</a></li>
-                                    <li><a href="edit.php">編輯資料</a></li>
-                                    <li><a href="password.php">變更密碼</a></li>
-                                    <li><a href="orderlist.php">訂單列表</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <header>
-            <div class="container">
-                <nav class="navbar navbar-expand-lg p-0">
-                    <a class="navbar-brand" href="index.php">
-                        <img src="assets/img/logo.png">
-                    </a>
-                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar">
-                        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbar">
-                        <ul class="navbar-nav mr-0 ml-auto">
-                            <li class="nav-item has_submenu">
-                                <a href="#" class="nav-link">
-                                    dropdown sample
-                                </a>
-                                <div class="submenu">
-                                    <ul>
-                                        <li><a class="dropdown-item" href="category.php">Link 1</a></li>
-                                        <li class="has_submenu">
-                                            <a href="#" class="dropdown-item">Link 2</a>
-                                            <div class="submenu">
-                                                <ul>
-                                                    <li>
-                                                        <a class="dropdown-item" href="category.php">SubLink 1</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="category.php">SubLink 2</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li><a class="dropdown-item" href="category.php">Link 3</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="sitemap.php">Sitemap</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
-    </div>
+    
